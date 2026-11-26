@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102722">
+  <meta name="description" content="A five-minute interactive Christmas romance set in snowy Evergreen Falls.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23192e28'/%3E%3Cpath d='M16 4v24M6 10l20 12M6 22l20-12M12 7l4 4 4-4M12 25l4-4 4 4' stroke='%23edc083' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+  <title>Christmas on Mistletoe Lane</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">✶</span><span>Evergreen Picture House</span></div>
+      <div class="settings">
+        <button id="motion" class="quiet" type="button" aria-pressed="false">Reduced motion</button>
+        <button id="sound" class="quiet" type="button" aria-pressed="true">♫ Sound on</button>
+        <button id="pause" class="quiet" type="button" hidden>Ⅱ Pause</button>
+      </div>
+    </header>
+    <section class="frame" aria-label="Game screen">
+      <div id="world" aria-hidden="true"></div>
+      <div id="view"></div>
+      <div id="toast" class="toast" aria-live="polite" hidden></div>
+    </section>
+    <section id="hud" class="hud" aria-label="Chapter objective" hidden>
+      <div><span id="chapter-number" class="eyebrow"></span><h2 id="chapter-title"></h2><p id="objective" aria-live="polite"></p></div>
+      <div class="track"><div id="inventory" aria-label="Collectible progress"></div><div id="progress" aria-label="Story progress"></div></div>
+    </section>
+    <nav id="touch" class="touch" aria-label="Touch controls" hidden>
+      <div><button data-move="-1" type="button" aria-label="Move left">◀</button><button data-move="1" type="button" aria-label="Move right">▶</button></div>
+      <div><button data-action="jump" type="button">↑ Jump</button><button data-action="interact" type="button">✦ Interact</button></div>
+    </nav>
+    <footer><span>EVERGREEN FALLS, MICHIGAN</span><span id="key-guide">An original interactive Christmas movie</span></footer>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
